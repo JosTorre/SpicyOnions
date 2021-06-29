@@ -1,4 +1,4 @@
-# SpicyOnions
+# Spicy Onions
 Still in development...
 
 A new more standarized version of Sweet Onions based on the work of LeonHeFirst and MaitreRenard, which aimes to be closer to Tor Project's specifications.
