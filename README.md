@@ -1,8 +1,8 @@
 # SpicyOnions
-Mini Portable Tor 
+Still in development...
 
-  for Research on Anonymity and Encryption.
-  
-Based on the former Sweet Onions by LonHeTheFirst and MaitreRenard
+A new more standarized version of Sweet Onions based on the work of LeonHeFirst and MaitreRenard, which aimes to be closer to Tor Project's specifications.
 
-by David Leutgeb & Jose Torre
+Portable Tor version (linux / dockers / python3)
+
+By Jose Torre and David Leutgeb.
