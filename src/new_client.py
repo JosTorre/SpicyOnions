@@ -50,7 +50,7 @@ s.connect((DIR_NODE, DIR_PORT))
  
 
 # Send and receive message from directory
-# ----------------------------------------------------------------i
+# ----------------------------------------------------------------
 
 s.send(bytes(CLIENT_REQ + SEP,"utf-8"))
 dir_data = s.recv(BUFFER_SIZE).decode()
