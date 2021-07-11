@@ -143,13 +143,15 @@ streams = []
 
 def threaded_client(back):
     """
-    threaded_client(argument1)
+        threaded_client(argument1)
+        
         Name: Threaded_Client
 
-        ???
+        Creates a Thread
 
-        argmuent1(???):???
+        argmuent1(object): Contains Data of connected Client
     """
+
     proceed = True
     while proceed:
         data = back.recv(2048) # We get data from predecesor
@@ -160,7 +162,7 @@ def threaded_client(back):
 # ----------------------------------------------------------------
 def calculate_keys(cell):
     """
-        calculate_keys(argument1)
+    calculate_keys(argument1)
             Name: Calculate_Keys
 
             Key derivation function. Takes object in argument1 and derives key.
@@ -190,7 +192,7 @@ def process(cell):
 
         Takes cells from communication and process them depending on the celltyp
 
-        argument1(object): Cell object ???
+        argument1(object): Cell object for processing
 
     """
 

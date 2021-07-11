@@ -257,11 +257,8 @@ class RelayCell:
 
                 argument1(bytes): contains key to decrypt
             """
-            #print(self.payload)
             self.payload = aes_decrypt(key, self.payload)
-            #selrecognized = aes_decrypt(key, self.recognized)
-            #print(self.recognized) 
-
+        
         def encrypt(self, key):
             """
                 encrypt
@@ -274,9 +271,7 @@ class RelayCell:
 
                 argument1(bytes): contains key to encrypt
             """
-            #print(key)
             self.payload = aes_encrypt(key, self.payload)
-            #self.recognized = aes_encrypt(key, self.recognized)
                 
         def full_encrypt(self, keys):
             """
@@ -292,7 +287,6 @@ class RelayCell:
             """
             for x in range(len(keys)) :
                 self.payload = aes_encrypt(keys[2-x], self.payload)
-                #self.recognized = aes_encrypt(keys[2-x], str(self.recognized))
         def full_decrypt(self, keys):
             """
                 full_decrypt
@@ -307,18 +301,29 @@ class RelayCell:
             """
             for x in range(len(keys)) :
                 self.payload = aes_decrypt(keys[x], self.payload)
-                #print(self.payload)
-                #self.recognized = aes_decrypt(keys[x], self.recognized)
 
         def is_recognized(self):
-                #print(self.recognized)
-                #print(type(self.recognized))
-                if self.recognized == b'0':
+            
+            """
+                is_recognized
+
+                Name: Is_Recognized
+
+                Checks if recognized field is encrypted. Returns True if unencryted and false if encrypted.
+            """
+            if self.recognized == b'0':
                         return True
-                else:
+            else:
                         return False
 
         def show_payload(self):
+            """
+                show_payload
+
+                Name: Show_Payload
+
+                Returns decoded Payload
+            """
                 return self.payload.decode('utf-8')
 
 class DestroyCell:
